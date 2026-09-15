@@ -1,0 +1,433 @@
+:root {
+    --mainFont: Arial;
+    --primColor: White;
+    --themeColor: #3B28CC;
+    --accentColor: #87BFFF;
+    --accentColor2: #9bc6f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--mainFont);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 225, 225);
+}
+
+.mainContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Login card */
+.childContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.7rem;
+
+    /* Glass */
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* Glass border */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    /* Shadow */
+    box-shadow: 0 8px 32px rgba(42, 42, 114, 0.15);
+}
+
+#loginHeader {
+    text-align: center;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: solid 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+    background-color: var(--themeColor);
+    color: white;
+}
+
+.loginBtn:hover {
+    background-color: #5746d8;
+}
+
+#forgotpass {
+    color: var(--accentColor);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+#forgotpass:hover {
+    color: var(--accentColor2);
+    text-decoration: underline;
+}
+
+/* Input */
+.field {
+    width: 100%;
+    padding: 10px 10px 10px 1.4rem;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+.inputCon {
+    position: relative;
+    width: 100%;
+}
+
+/* Language selector */
+.langSelectorContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+}
+
+.langSelectElement {
+    width: 100%;
+    max-width: 140px;
+
+    padding: 5px 10px 5px 28px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.langSelectorContainer .fa-language {
+    position: absolute;
+    left: 8px;
+
+    font-size: 1rem;
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+/* Floating label */
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.75rem;
+
+    color: rgb(121, 120, 120);
+
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.inputCon input:focus + label,
+.inputCon input:not(:placeholder-shown) + label {
+    top: 0;
+
+    background-color: var(--primColor);
+
+    font-size: 0.8rem;
+    padding: 0 0.25rem;
+
+    transform: translateY(-50%);
+    color: var(--accentColor2);
+}
+
+/* Show password */
+#showPasswordbtn {
+    position: absolute;
+    top: 0;
+    transform: translateY(-32%);
+    right: 0;
+
+    font-size: 0.95rem;
+    margin-right: 10px;
+
+    color: var(--accentColor);
+}
+
+#showPasswordbtn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--accentColor2);
+}
+
+/* Sign up */
+#signUpLink {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--accentColor);
+}
+
+#signUpLink:hover {
+    color: var(--accentColor2);
+    text-decoration: underline;
+}
+
+/* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.separator span {
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Alternative login methods */
+.altMethods div {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 5px;
+    padding: 14px;
+
+    text-align: center;
+    border-radius: 15px;
+}
+
+.altMethods .google {
+    background-color: #ffffff;
+    margin-top: 5px;
+    border: black 1.5px solid;
+}
+
+.altMethods .twitter-X {
+    background-color: black;
+    color: white;
+}
+
+.altMethods .facebook {
+    background-color: rgb(38, 38, 254);
+    color: white;
+}
+
+.conNoAccWrap {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.conNoAccWrap .contNoAcc {
+    padding: 15px;
+    border-radius: 15px;
+    border: black 1px solid;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.contNoAcc:hover {
+    background-color: aliceblue;
+}
+
+@media (max-width: 900px) {
+
+    .childContainer {
+        max-width: 380px;
+        padding: 1.75rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .mainContainer {
+        align-items: flex-start;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .childContainer {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    #loginHeader {
+        font-size: 1.5rem;
+    }
+
+    .langSelectElement {
+        max-width: 130px;
+        padding-left: 28px;
+        padding-right: 20px;
+    }
+
+    .separator span {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .langSelectorContainer {
+        top: 8px;
+        right: 8px;
+    }
+
+    .langSelectElement {
+        max-width: 120px;
+        font-size: 0.8rem;
+        padding: 5px 8px 5px 26px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .mainContainer {
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .childContainer {
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+    }
+
+    #loginHeader {
+        font-size: 1.35rem;
+    }
+
+    .field {
+        padding-left: 1rem;
+    }
+
+    .langSelectElement {
+        max-width: 115px;
+        font-size: 0.85rem;
+    }
+
+    .loginBtn {
+        font-size: 1rem;
+        padding: 9px;
+    }
+
+    .altMethods div {
+        padding: 12px;
+    }
+
+}
+
+/* Homepage */
+
+.navigationBar {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--themeColor);
+
+    min-height: 70px;
+}
+
+/* Brand */
+.brandingWrapper {
+    flex: 1;
+    margin-left: 2.5rem;
+    position: absolute;
+    display: flex;
+}
+
+#brandButton {
+    color: white;
+    text-decoration: none;
+    font-size: 1.01rem;
+    font-weight: bold;
+}
+
+/* Navigation links */
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.navLinks a {
+    display: block;
+
+    padding: 20px 30px;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.navLinks a:hover {
+    background-color: white;
+    color: black;
+}
+
+.searchbar {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+}
+
+.searchbar #searchBar {
+    padding: 10px;
+    width: 13rem;
+}
+
+.burgerIcon {
+    position: absolute;
+    margin: 7.5px;
+}
+
+.burgerIcon .hamburgerDrawer {
+    padding: 13px;
+    cursor: pointer;
+}
