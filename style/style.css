@@ -219,12 +219,18 @@ body {
 
 .separator hr {
     flex-grow: 1;
+.secondaryNavContent {
+    width: 100%;
+}
+
     border: none;
     border-top: 1px solid black;
 }
 
 .separator span {
-    padding: 0 15px;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -460,25 +466,57 @@ body {
 .navigationBar {
     display: flex;
     align-items: center;
-
+    position: relative;
     background-color: var(--themeColor);
+    min-height: 90px;
+}
 
-    min-height: 70px;
+.secondaryNavBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+
+.secondaryNavContent {
+    width: 100%;
+}
+
+.unorderedList {
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+.lisComp a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+.unorderedList li a:hover {
+    color: var(--primColor);
+    background-color: var(--themeColor);
 }
 
 /* Brand */
 .brandingWrapper {
-    flex: 1;
-    margin-left: 2.5rem;
     position: absolute;
     display: flex;
 }
 
-#brandButton {
-    color: white;
-    text-decoration: none;
-    font-size: 1.01rem;
-    font-weight: bold;
+.brandLogo {
+    width: 200px;
+    height: auto;
+    margin-left: 1rem;
 }
 
 /* Navigation links */
@@ -512,15 +550,43 @@ body {
     color: black;
 }
 
-.searchbar {
+.searchBar {
     position: absolute;
-    right: 0;
-    margin-right: 2rem;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%, -50%);
 }
 
-.searchbar #searchBar {
-    padding: 10px;
-    width: 13rem;
+#searchBar::placeholder {
+    color: black;
+}
+
+#searchBar {
+    border: none;
+    padding: 15px;
+    width: 20rem;
+}
+
+#searchBtn {
+    padding: 15px 12px;
+    cursor: pointer;
+   background-color: var(--accentColor);
+    color: white;
+    border: none;
+    width: 6.2rem;
+}
+
+.fa-cart-shopping {
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;  
+    top: 50%;
+    margin-right: 1rem;
+    transform: translateY(-50%);
+    display: flex;
+    right: 0;
 }
 
 .burgerIcon {

@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
 <nav class="navigationBar">
     <div class="brandingwrapper">
         <a href="#" id="brandButton">
-            <img src="..assets/">
+            <img src="../assets/branding.png" alt="Brand Logo" class="brandLogo">
         </a>
     </div>
+    <div class="searchBar">
+        <input type="text" placeholder="Search..." aria-label="Search" id="searchBar">
+        <button type="submit" aria-label="Submit search" id="searchBtn">Search</button>
+    </div>
+
+    <div class="shopingCartContainer">
+    <a class="shoppingCart" id="shoppingCart" href="#">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+</div>
 </nav>
+<div class="secondaryNavBar"> <!-- Positioned below the main navbar -->
+    <div class="secondaryNavContent">
+        <ul class="unorderedList">
+            <li class="lisComp"><a href="#">Home</a></li>
+            <li class="lisComp"><a href="#">Playstation</a></li>
+            <li class="lisComp"><a href="#">Xbox</a></li>
+            <li class="lisComp"><a href="#">AMD</a></li>
+            <li class="lisComp"><a href="#">Nvidia</a></li>
+            <li class="lisComp"><a href="#">Intel</a></li>
+            <li class="lisComp"><a href="#">Handhelds</a></li>
+            <li class="lisComp"><a href="#">Accessories & Peripherals</a></li>
+            <li class="lisComp"><a href="#">Switch</a></li>
+            <li class="lisComp"><a href="#">PC Hardware</a></li>
+            <li class="lisComp"><a href="#">Collectibles</a></li>
+            <li class="lisComp"><a href="#">Phones</a></li>
+            <li class="lisComp"><a href="#">Tablets</a></li>
+        </ul>
+    </div>
+</div>
 
 <div class="mainContent">
     <div class="imageCarousel" aria-label="Featured promotions carousel">
