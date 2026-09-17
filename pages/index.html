@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="mainContainer">
+            <div class="langSelectorContainer">
+                <i class="fa-solid fa-language"></i>
+                <select class="langSelectElement" aria-label="Language selector">
+                    <option value="en">English</option>
+                    <option value="jp">日本語</option>
+                    <option value="esp">Español</option>
+                    <option value="tag">Tagalog</option>
+                </select>
+            </div>
+            <div class="childContainer">
+                <form action="#" method="post">
+                    <h2 id="loginHeader" data-i18n="loginHeader">Login</h2>
+                    <div class="inputCon emailField">
+                        <input type="email" placeholder=" " class="email field" required data-i18n-placeholder="emailPlaceholder">
+                        <label class="label" data-i18n="emailLabel">Email</label>
+                    </div>
+                    <div class="inputCon passField">
+                        <input type="password" placeholder=" " id="password" class="password field" required data-i18n-placeholder="passwordPlaceholder">
+                        <label class="label" data-i18n="passwordLabel">Password</label>
+                        <p id="showPasswordbtn" data-i18n="showPassword">Show</p>
+                    </div>
+                    <a id="forgotpass" href="#" data-i18n="forgotPassword">Forgot Password?</a>
+                    <button class="loginBtn" type="submit" data-i18n="loginButton">Login</button>
+                    <p id="singUpthingymajig"><span data-i18n="signUpPrompt">No account?</span> <a id="signUpLink" href="#" style="font-weight: bold;" data-i18n="signUpLink">Sign up</a></p>
+                </form>
+                <div class="separator">
+                    <hr>
+                    <span data-i18n="separatorOr">or</span>
+                    <hr>
+                </div>
+                <div class="altMethods">
+                    <div class="google" id="google">Google</div>
+                    <div class="twitter-X" id="twitter-Eks">X</div>
+                    <div class="facebook" id="facebook">Facebook</div>
+                </div>
+            </div>
+            <div class="conNoAccWrap">
+                <a type="button" class="contNoAcc" id="proceed-no-acc" href="homepage.html" data-i18n="continueWithoutAccount">Continue without an account</a>
+            </div>
+        </div>
+    </body>
+    <script src="javaScript/fuctions.js"></script>
+</html>

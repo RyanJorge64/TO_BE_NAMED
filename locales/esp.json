@@ -1,0 +1,15 @@
+{
+  "loginHeader": "Iniciar sesión",
+  "emailLabel": "Correo electrónico",
+  "passwordLabel": "Contraseña",
+  "showPassword": "Mostrar",
+  "hidePassword": "Ocultar",
+  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "loginButton": "Iniciar sesión",
+  "signUpPrompt": "¿No tienes cuenta?",
+  "signUpLink": "Regístrate",
+  "separatorOr": "o",
+  "continueWithoutAccount": "Continuar sin una cuenta",
+  "emailPlaceholder": "",
+  "passwordPlaceholder": ""
+}

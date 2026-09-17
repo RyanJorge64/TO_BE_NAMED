@@ -1,0 +1,13 @@
+{
+  "loginHeader": "Login",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "showPassword": "Show",
+  "hidePassword": "Hide",
+  "forgotPassword": "Forgot Password?",
+  "loginButton": "Login",
+  "signUpPrompt": "No account?",
+  "signUpLink": "Sign up",
+  "separatorOr": "or",
+  "continueWithoutAccount": "Continue without an account"
+}

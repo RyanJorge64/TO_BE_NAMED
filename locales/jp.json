@@ -1,0 +1,15 @@
+{
+  "loginHeader": "ログイン",
+  "emailLabel": "メールアドレス",
+  "passwordLabel": "パスワード",
+  "showPassword": "表示",
+  "hidePassword": "非表示",
+  "forgotPassword": "パスワードを忘れましたか？",
+  "loginButton": "ログイン",
+  "signUpPrompt": "アカウントをお持ちでない方?",
+  "signUpLink": "登録",
+  "separatorOr": "または",
+  "continueWithoutAccount": "アカウントなしで続行",
+  "emailPlaceholder": "",
+  "passwordPlaceholder": ""
+}

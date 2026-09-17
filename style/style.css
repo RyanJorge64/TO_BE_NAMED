@@ -14,7 +14,7 @@ body {
     font-family: var(--mainFont);
     margin: 0;
     padding: 0;
-    background-color: rgb(229, 225, 225);
+    background-color: rgb(241, 239, 239);
 }
 
 .mainContainer {
@@ -38,17 +38,7 @@ body {
     flex-direction: column;
 
     border-radius: 0.7rem;
-
-    /* Glass */
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    /* Glass border */
-    border: 1px solid rgba(255, 255, 255, 0.7);
-
-    /* Shadow */
-    box-shadow: 0 8px 32px rgba(42, 42, 114, 0.15);
+    background: white;
 }
 
 #loginHeader {
@@ -73,14 +63,27 @@ body {
 }
 
 #forgotpass {
+    display: inline-block;
     color: var(--accentColor);
     text-decoration: none;
     margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow-wrap: normal;
 }
 
 #forgotpass:hover {
     color: var(--accentColor2);
     text-decoration: underline;
+}
+
+#singUpthingymajig {
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+#singUpLink {
+    white-space: nowrap;
+    overflow-wrap: normal;
 }
 
 /* Input */
@@ -94,7 +97,12 @@ body {
     justify-content: center;
 
     border-radius: 10px;
-    border: solid 1px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #1d1d1d;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .inputCon {
@@ -145,6 +153,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 0.75rem;
+    max-width: calc(100% - 1.5rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     color: rgb(121, 120, 120);
 
@@ -155,16 +167,18 @@ body {
 .inputCon input:focus + label,
 .inputCon input:not(:placeholder-shown) + label {
     top: 0;
+    left: 0.8rem;
 
-    background-color: var(--primColor);
+    background: white;
 
+    border-radius: 0.25rem;
     font-size: 0.8rem;
-    padding: 0 0.25rem;
+    padding: 0 0.4rem;
+    line-height: 1;
 
     transform: translateY(-50%);
     color: var(--accentColor2);
 }
-
 /* Show password */
 #showPasswordbtn {
     position: absolute;
@@ -356,6 +370,93 @@ body {
 
 /* Homepage */
 
+.mainContent {
+    padding: 2rem 1rem 0;
+}
+
+.imageCarousel {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carouselSlides {
+    display: flex;
+    width: 100%;
+    height: 420px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselImage {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.carouselImage img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 90px;
+    border: none;
+    border-radius: 10%;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--themeColor);
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 20px rgba(42, 42, 114, 0.12);
+    z-index: 2;
+}
+
+.carouselBtn:hover {
+    background: white;
+}
+
+.carouselPrev {
+    left: 16px;
+}
+
+.carouselNext {
+    right: 16px;
+}
+
+.carouselDots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carouselDot {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carouselDot.active {
+    background: var(--themeColor);
+    transform: scale(1.15);
+}
+
 .navigationBar {
     display: flex;
     align-items: center;
@@ -430,4 +531,78 @@ body {
 .burgerIcon .hamburgerDrawer {
     padding: 13px;
     cursor: pointer;
+}
+
+/*footer design*/
+
+.footerMainWrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    background: var(--themeColor);
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 -10px 30px rgba(42, 42, 114, 0.12);
+}
+
+.siteFooter {
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+}
+
+.footerContentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footerContentWrapper > div {
+    flex: 1 1 180px;
+    min-width: 180px;
+}
+
+.footerContentWrapper h2 {
+    margin: 0 0 0.9rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+.footerContents,
+.footerLinks {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footerLinks:hover {
+    color: white;
+}
+
+.footerContents {
+    margin: 0.3rem 0;
+}
+
+.footerLinks {
+    width: fit-content;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footerHeader {
+    color: rgb(236, 192, 58);
 }

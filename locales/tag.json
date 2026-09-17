@@ -1,0 +1,15 @@
+{
+  "loginHeader": "Mag-login",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "showPassword": "Ipakita",
+  "hidePassword": "Itago",
+  "forgotPassword": "Nakalimutan ang password?",
+  "loginButton": "Mag-login",
+  "signUpPrompt": "Walang account?",
+  "signUpLink": "Mag-sign up",
+  "separatorOr": "o",
+  "continueWithoutAccount": "Magpatuloy nang walang account",
+  "emailPlaceholder": "",
+  "passwordPlaceholder": ""
+}
