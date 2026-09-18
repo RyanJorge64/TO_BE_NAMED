@@ -599,6 +599,71 @@ body {
     cursor: pointer;
 }
 
+/* main body */
+.currentHotDeals {
+    width: 100%;
+    align-items: center;
+    color: rgb(60, 60, 60);
+    position: relative;
+    font-size: 1.2rem;
+    background-color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: 2.8rem;
+}
+
+.hotDealsProducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.hotProduct {
+    display: flex;
+    flex: 0 1 140px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: white;
+    border: 0.001rem solid #e2e2e2;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hotProduct:hover {
+    background-color: whitesmoke;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 18px rgba(252, 251, 251, 0.16);
+    z-index: 1;
+}
+.hotProduct img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.hotProductName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.87rem;
+    color: rgb(60, 60, 60);
+    margin: 0.5rem 0;
+    text-align: center;
+    word-break: break-word;
+}
+
 /*footer design*/
 
 .footerMainWrapper {
